@@ -1,0 +1,306 @@
+// Dimensions and basic things
+
+// import { StatusBar } from 'expo-status-bar';
+// import { StyleSheet, Text, View, TouchableWithoutFeedback,TouchableHighlight, TouchableOpacity, TouchableNativeFeedback ,Image, SafeAreaView, Button, Alert, Platform, Dimensions} from 'react-native';
+
+// import { useDimensions, useDeviceOrientation } from "@react-native-community/hooks";
+
+// export default function App() {
+//   // console.log(require("./assets/icon.png"));
+//   // console.log(Dimensions.get('screen'));
+//   // console.log(useDimensions());
+//   // console.log(useDeviceOrientation());
+//   const {landscape}= useDeviceOrientation();
+//   return (
+//     <>
+//     <SafeAreaView style={styles.container}>
+//       {/* <Text  numberOfLines={3} onPress={() => console.log("Text Clicked")}> Native!! Krish Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam consequuntur expedita, quae delectus obcaecati in suscipit distinctio animi harum, minima reprehenderit corrupti! Molestiae natus deserunt suscipit nobis veniam dolores. </Text> */}
+
+//       {/* <TouchableNativeFeedback onPress={()=>console.log("Image Tapped")}> */}
+//       {/* <Image
+//       blurRadius={0.1}
+//       fadeDuration={1000}
+//       source={{
+//           width: 200,
+//           height: 300,
+//         uri: "https://picsum.photos/200/300"}} /> */}
+//         {/* <View style={{width: 200, height:70, backgroundColor: "dodgerblue"}}>
+
+//         </View> */}
+//       {/* </TouchableNativeFeedback> */}
+//       <StatusBar style="auto" />
+//       {/* <Image source={
+//         require("./assets/icon.png")} /> */}
+
+//         {/* Buttons */}
+//         {/* <Button  title='Click ME' onPress={()=>Alert.prompt("My Title","My message", text => console.log(text)) }/> */}
+
+//         {/* Layout */}
+//         <View style={{
+//           backgroundColor: "dodgerblue",
+//           width: '100%',
+//           height: landscape?'100%':'30%',
+//         }}></View>
+//     </SafeAreaView>
+//     </>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     top: 20,
+//     flex: 1,
+//     backgroundColor: 'white',
+//     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+//   },
+// });
+
+// Flexbox
+
+import React from "react";
+import { StatusBar } from "expo-status-bar";
+import { View } from "react-native";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import Welcome from "./app/screens/Welcome";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+
+export default function App() {
+  const names = ["Krish", "Prachi", "Sweety", "Nitin"];
+  return (
+    //  <WelcomeScreen />
+    <>
+      {/* <WelcomeScreen /> */}
+      {/* <ViewImageScreen /> */}
+      {/* <View
+        style={{
+          backgroundColor: "white",
+          flex: 1,
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center",
+          // flexWrap: "wrap",
+        }}
+      >
+        {names.map((name) => (
+          <Welcome key={name} name={name} />
+        ))}
+      </View> */}
+      <StatusBar style="auto" />
+    </>
+  );
+}
+// <View style={{
+//   backgroundColor: 'white',
+//   flex: 1,
+//   flexDirection: "row",
+//   justifyContent: "center",
+//   alignItems: "center",
+//   alignContent: "center",
+//   // flexWrap: "wrap",
+
+// }}>
+//   <View style={{
+//   backgroundColor: 'blue',
+//   // flexBasis: 100,
+//   // flex: 1,
+//   // flex: -1,
+//   // alignSelf: "flex-start"
+//   width: 100,
+//   height: 100,
+// }} />
+//   <View style={{
+//   backgroundColor: 'gold',
+//   width: 100,
+//   height: 100,
+//   // top: 30,
+//     top: 20,
+//     right: 20,
+//     position: "relative"
+// }} />
+//   <View style={{
+//     backgroundColor: 'red',
+//     width: 100,
+//     height: 100,
+// }} />
+//   {/* <View style={{
+//   backgroundColor: 'green',
+//   width: 100,
+//   height: 100,
+// }} />
+//   <View style={{
+//   backgroundColor: 'greenyellow',
+//   width: 100,
+//   height: 100,
+// }} /> */}
+// </View>
+
+
+
+
+
+
+import React, { useState } from "react";
+import { StatusBar } from "expo-status-bar";
+import {
+  Platform,
+  View,
+  StyleSheet,
+  TextInput,
+  Text,
+  Switch,
+} from "react-native";
+import AppText from "./app/components/AppText";
+import { MaterialIcons } from "@expo/vector-icons";
+import AppButton from "./app/components/AppButton";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import Card from "./app/components/Card";
+import ListingDetails from "./app/screens/ListingDetails";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
+import Screen from "./app/components/Screen";
+import Icon from "./app/components/Icon";
+import ListItem from "./app/components/ListItem";
+import AccountScreen from "./app/screens/AccountScreen";
+import ListingScreen from "./app/screens/ListingScreen";
+import AppTextInput from "./app/components/AppTextInput";
+import AppPicker from "./app/components/AppPicker";
+import LoginScreen from "./app/screens/LoginScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
+
+export default function App() {
+  // const [IsNew, setIsNew] = useState(false);
+  // // const [firstname, setFirstname] = useState("");
+  // const categories = [
+  //   { label: "Krish", value: 1 },
+  //   { label: "asdfg", value: 2 },
+  //   { label: "qwerty", value: 3 },
+  // ];
+
+  // const [category, setCategory] = useState(categories[0]);
+  return (
+    <>
+      {/* <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      > */}
+      {/* Borders */}
+      {/* <View
+          style={{
+            backgroundColor: "dodgerblue",
+            width: 100,
+            height: 100,
+            borderWidth: 10,
+            borderColor: "royalblue",
+            borderRadius: 10,
+            // borderTopWidth: 20,
+            // borderTopLeftRadius: 50,
+            borderRadius: 50,
+          }}
+        ></View> */}
+      {/* Shadows */}
+      {/* <View
+          style={{
+            backgroundColor: "dodgerblue",
+            width: 100,
+            height: 100,
+            // paddingBottom: 40,
+            // ios
+            // shadowColor: "grey",
+            // shadowOffset: { width: 10, height: 10 },
+            // shadowOpacity: 1,
+
+            // android
+            // elevation: 20,
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: "gold",
+              width: 50,
+              height: 50,
+              margin: 25,
+            }}
+          ></View>
+        </View>
+      </View> */}
+
+      {/* <View> */}
+      {/* <AppText>i love React native !!</AppText>
+        <MaterialIcons name="email" size={104} color="blue" />
+      <AppButton title="Krish" onPress={() => console.log("Tapped")} /> */}
+      {/* </View> */}
+      {/* <WelcomeScreen /> */}
+
+      {/* <ListingDetails /> */}
+      {/* <ViewImageScreen />
+      
+      */}
+
+      {/* <MessagesScreen /> */}
+
+      {/* <Screen>
+        <ListItem
+          title="title"
+          subTitle="subTitle"
+          ImageComponent={<Icon name="email" />}
+        />
+      </Screen> */}
+
+      {/* <AccountScreen /> */}
+
+      {/* <ListingScreen /> */}
+
+      {/* <Screen>
+        <Text>{firstname}</Text>
+        <TextInput
+          // maxLength={5}
+          // keyboardType="numeric"
+
+          // clearButtonMode="always"
+
+          // secureTextEntry
+          style={{
+            // marginTop: 5,
+            borderBottomColor: "#ccc",
+            borderBottomWidth: 1,
+          }}
+          placeholder="First name"
+          onChangeText={(text) => setFirstname(text)}
+        />
+      </Screen> */}
+
+      {/* <AppTextInput placeholder="Username" icon="email" /> */}
+
+      {/* <Screen>
+        <Switch
+          value={IsNew}
+          onValueChange={(newValue) => setIsNew(newValue)}
+          // onChange={() => console.log("Switched")}
+        />
+      </Screen> */}
+      {/* <Screen>
+
+
+        <AppPicker
+          selectedItem={category}
+          onSelectedItem={(item) => setCategory(item)}
+          item={categories}
+          icon="apps"
+          placeholder="Category"
+        />
+        <AppTextInput icon="email" placeholder="Email" />
+      </Screen> */}
+
+      {/* <LoginScreen />
+       */}
+
+      {/* <ListingEditScreen /> */}
+
+      <StatusBar style="auto" />
+    </>
+  );
+}
